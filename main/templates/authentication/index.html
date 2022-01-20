@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <title>Welcome</title>
+    <style>
+        .lg {
+            color: white;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 10px 5px;
+            background-color: red;
+            padding-top: 16px;
+            border-radius: 20px;
+            float: left;
+        }
+        
+        .loginbox {
+            width: 190px;
+            height: 120px;
+            background: #000207;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            padding: 12px 20px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        form {
+            border: 0px solid #f1f1f1;
+            width: 30%;
+            height: 30%;
+            padding: 30px;
+        }
+        
+        body {
+            background-image: url('{% static "authentication/background.jpg"%}');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        h1 {
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 32px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <h1>Welcome To Pariksha</h1>
+        <br><br><br><br><br><br>
+        <form class="loginbox">
+
+
+
+            <a href="/signin" class="lg">Login</a>
+            <a href="/host" class="lg">Admin</a><br><br><br>
+            <script src="" async defer></script>
+
+
+        </form>
+    </center>
+
+</body>
+
+</html>

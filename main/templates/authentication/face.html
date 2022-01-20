@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Exam Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+
+</head>
+<style>
+    button {
+        color: white;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        padding: 10px 10px;
+        background-color: red;
+        float: left;
+        padding-top: 15px;
+        border-radius: 20px;
+    }
+    
+    label {
+        float: left;
+    }
+    
+    .loginbox {
+        width: 310px;
+        height: 180px;
+        background: #000207;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 5px;
+        border-radius: 40px;
+    }
+    
+    body {
+        background-image: url('{% static "authentication/background.jpg"%}');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        color: white;
+        margin-bottom: 20px;
+        display: inline-block;
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 30px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    .bk {
+            color: white;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 25%;
+            padding: 5px 5px;
+            background-color: red;
+            float: right;
+            padding-top: 10px;
+            border-radius: 20px;
+        }
+        .mess{
+            font-size: 18px;
+            font-weight: bold;
+        }
+</style>
+<script>
+    function mcq() {
+    var T = document.getElementById("display");
+    T.style.display = "";}
+    function disp() {
+    var T = document.getElementById("button2");
+    T.style.display = "";}
+</script>
+<body>
+    
+    
+    <center>
+        <h1 style="color: white;">Pariksha</h1><br><br><br><br><br><br>
+        <form method="POST" class="loginbox"><br><br>
+            {% csrf_token %}
+            <button type="submit"> Start</button> 
+            <a href="/index" class="bk">SignOut</a><br>
+            <h3 style="color: green;" class="mess">{{start}}</h3>
+            <h3 style="color: red;">{{stop}}</h3>
+            <h3 style="color: red;">{{Facenot}}</h3>
+            
+
+    </center>
+
+</body>
+</html>

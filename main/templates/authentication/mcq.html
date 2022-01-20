@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> MCQ </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}  
+
+</head>
+
+<style>
+    .radio {
+        color: black;
+        margin: 5px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        padding: 10px 10px;
+        background-color: rgb(248, 244, 244);
+        float: left;
+        padding-top: 15px;
+        border-radius: 20px;
+        height: 30%;
+    }
+
+</style>
+
+<body>
+    <script>
+        function mcq() {
+        var T = document.getElementById("display");
+        T.style.display = "";}
+        function disp() {
+        var T = document.getElementById("button2");
+        T.style.display = "";}
+
+    </script>
+    <button type="submit" onclick="disp();"> Start</button>  
+    <button id="button2" style="display: none;" onclick="mcq();">Qution Paper</button>
+    
+        
+
+    <for class="radio" id="display" style="display:none">
+        <h3 >Q1) Who is present Prime Minister of India ?</h3>
+        <input type="radio" id="q1a1" name="q1"  required>
+        <label for="q1a1"><b>Narendra Modi</b></label>
+        <br>
+        <input type="radio" id="q1a2" name="q1" required>
+        <label for="q1a2"><b>Rahul Gandhi</b></label>
+        <br>
+        <input type="radio" id="q1a3" name="q1" required>
+        <label for="q1a3"><b>Manmohan Singh</b></label>
+        <br>
+        <h3>Q2) Who is the Present President of India ?</h3>
+        <input type="radio" id="q2a1" name="q2" required>
+        <label for="q2a1"><b>Venkaiah naidu</b></label>
+        <br>
+        <input type="radio" id="q2a2" name="q2" required>
+        <label for="q2a2"><b>Pranab Mukherjee</b></label>
+        <br>
+        <input type="radio" id="q2a3" name="q2" required>
+        <label for="q2a3"><b>Ram Nath Kovind</b></label>
+        <br>
+        <h3>Q3) Who is known as Father of Indian Constitution ?</h3>
+        <input type="radio" id="q3a1" name="q3" required>
+        <label for="q3a1"><b>Charu Chandra Biswas</b></label>
+        <br>
+        <input type="radio" id="q3a2" name="q3" required>
+        <label for="q3a2"><b>B. R. Ambedkar</b></label>
+        <br>
+        <input type="radio" id="q3a3" name="q3" required>
+        <label for="q3a3"><b>Jawaharlal Nehru</b></label>
+        <br>
+        <h3>Q4) Who is known as the Iron Man of India ?</h3>
+        <input type="radio" id="q4a1" name="q4" required>
+        <label for="q4a1"><b>Mahatma Gandhi</b></label>
+        <br>
+        <input type="radio" id="q4a2" name="q4" required>
+        <label for="q4a2"><b>Rabindranath Tagore</b></label>
+        <br>
+        <input type="radio" id="q4a3" name="q4" required>
+        <label for="q4a3"><b>Sardar Vallabhbhai Patel</b></label>
+        <br>
+        <h3>Q5) Who was the first Woman Prime Minister of India ?</h3>
+        <input type="radio" id="q5a1" name="q5" required>
+        <label for="q5a1"><b>Sonia Gandhi</b></label>
+        <br>
+        <input type="radio" id="q5a2" name="q5" required>
+        <label for="q5a2"><b>Indira Gandhi</b></label>
+        <br>
+        <input type="radio" id="q5a3" name="q5" required>
+        <label for="q5a3"><b>Kalpana Chawla</b></label>
+        <br>
+    </for>
+
+
+</body>
+</html>

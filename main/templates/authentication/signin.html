@@ -1,0 +1,129 @@
+<html>
+{%load static%}
+
+<head>
+    <title>Signup Page</title>
+
+    <style>
+        .lg {
+            color: white;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 10px 10px;
+            background-color: red;
+            float: left;
+            padding-top: 15px;
+            border-radius: 20px;
+        }
+        
+        .bk {
+            color: white;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 15%;
+            padding: 10px 10px;
+            background-color: red;
+            float: right;
+            padding-top: 10px;
+            border-radius: 20px;
+        }
+        
+        div {
+            font-size: 16px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        
+        label {
+            float: left;
+        }
+        
+        input[type=text],
+        input[type=password],
+        input[type=email] {
+            width: 100%;
+            color: white;
+            margin-bottom: 20px;
+            display: inline-block;
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 30px;
+        }
+        
+        body {
+            background-image: url('{% static "authentication/background.jpg"%}');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        img {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: -40px;
+            left: 35%;
+            right: 50%;
+            padding: 10px;
+        }
+        .loginbox {
+            width: 310px;
+            height: 490px;
+            background: #000207;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+        }
+        h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 25px;
+            padding-top: 40px;
+            padding-bottom: 15px;
+            bottom: 50px;
+            left: 16px;
+        }
+        h3 {
+            float: left;
+            font-size: 15px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center><br><br><br>
+        <form method="post" class="loginbox">
+            <img src='{% static "authentication/logo1.png"%}'>
+            <h1>Student Login</h1>
+            {% csrf_token %}
+            <div>
+                <label for=''><b>Username  :</b></label>
+                <input type="text" placeholder="Enter username" name="username" float="right" required><br>
+                <label for=''><b>Password   :</b></label>
+                <input type="password" id="pass1" name="pass1" placeholder="Enter Password" required><br>
+                <label for=''><b>RollNumber:</b></label>
+                <input type="text" id="roll" name="roll" placeholder="Enter RollNumber" required><br>
+                <label for=''><b>Email:</b></label>
+                <input type="email" id="emailaddress" name="emailaddress" placeholder="Enter Email" required><br>
+                <button type="submit" class="lg"><b>Login</b></button><br>
+                <h3 style="color: red;">{{error}}</h3>
+                <a href="/index" class="bk">Back</a>
+
+
+            </div>
+    </center>
+    </form>
+</body>
+
+</html>
